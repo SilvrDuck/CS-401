@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Homework 1</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Homework 1_hugo</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11783,7 +11783,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">DATA_FOLDER</span> <span class="o">=</span> <span class="s1">&#39;/Users/noodle/workspace/python/ADA/tutorials/ADA2017-Tutorials/02 - Intro to Pandas/Data&#39;</span> <span class="c1"># Use the data folder provided in Tutorial 02 - Intro to Pandas.</span>
@@ -11808,7 +11808,7 @@ Make sure you handle all the different expressions for <em>new cases</em> and <e
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -11833,24 +11833,26 @@ Make sure you handle all the different expressions for <em>new cases</em> and <e
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="k">def</span> <span class="nf">cleanAndReturn</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">variableName</span><span class="p">,</span> <span class="n">variableValue</span><span class="p">,</span> <span class="n">globalIndexName</span><span class="p">):</span>
     <span class="n">myDf</span> <span class="o">=</span> <span class="n">dataframe</span><span class="p">[</span><span class="n">dataframe</span><span class="p">[</span><span class="n">variableName</span><span class="p">]</span> <span class="o">==</span> <span class="n">variableValue</span><span class="p">]</span>
-    <span class="sd">&quot;&quot;&quot;myDf = myDf.fillna(value=0)&quot;&quot;&quot;</span>
+    <span class="n">myDf</span> <span class="o">=</span> <span class="n">myDf</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     <span class="k">del</span> <span class="n">myDf</span><span class="p">[</span><span class="n">variableName</span><span class="p">]</span>
     <span class="n">myDf</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_tuples</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">map</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">cN</span><span class="p">:</span> <span class="p">(</span><span class="n">globalIndexName</span><span class="p">,</span> <span class="n">cN</span><span class="p">),</span> <span class="n">myDf</span><span class="o">.</span><span class="n">columns</span><span class="p">)])</span>
     <span class="n">myDf</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">infer_datetime_format</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">),</span> <span class="n">myDf</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
     
     <span class="k">return</span> <span class="n">myDf</span>
-
-<span class="sd">&quot;&quot;&quot; count and extrapolate daily value for the given Serie &quot;&quot;&quot;</span>
-<span class="k">def</span> <span class="nf">countAndExtrapolate</span><span class="p">(</span><span class="n">serie</span><span class="p">):</span>
+    
+<span class="sd">&quot;&quot;&quot; avg daily per month &quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">averageDailyPerMonth</span><span class="p">(</span><span class="n">serie</span><span class="p">):</span>
     <span class="n">notNanValues</span> <span class="o">=</span> <span class="n">serie</span><span class="p">[</span><span class="n">serie</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span>
     <span class="k">if</span> <span class="n">notNanValues</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span> 
         <span class="k">return</span> <span class="s1">&#39;NC&#39;</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">notNanValues</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="n">notNanValues</span><span class="o">.</span><span class="n">size</span>
+
     
 
-
 <span class="sd">&quot;&quot;&quot; I/ build &amp; concatenate the dataset&quot;&quot;&quot;</span>
+
+<span class="sd">&quot;&quot;&quot; NOT EXISTENT VALUES ARE CONSIDERED AS 0 INSIDE A COUNTRY (if one register not null : others null &lt;=&gt; 0)&quot;&quot;&quot;</span>
 
 <span class="n">guinea</span> <span class="o">=</span> <span class="n">concatData</span><span class="p">(</span><span class="n">DATA_FOLDER</span><span class="o">+</span><span class="s2">&quot;/ebola/guinea_data/&quot;</span><span class="p">)</span>
 <span class="n">guinea_new_case</span> <span class="o">=</span> <span class="n">cleanAndReturn</span><span class="p">(</span><span class="n">guinea</span><span class="p">,</span><span class="s1">&#39;Description&#39;</span><span class="p">,</span> <span class="s1">&#39;New cases of confirmed&#39;</span><span class="p">,</span> <span class="s1">&#39;guinea&#39;</span><span class="p">);</span>
@@ -11864,18 +11866,35 @@ Make sure you handle all the different expressions for <em>new cases</em> and <e
 <span class="n">sl_new_case</span> <span class="o">=</span> <span class="n">cleanAndReturn</span><span class="p">(</span><span class="n">sl</span><span class="p">,</span><span class="s1">&#39;variable&#39;</span><span class="p">,</span> <span class="s1">&#39;new_confirmed&#39;</span><span class="p">,</span> <span class="s1">&#39;sl&#39;</span><span class="p">);</span>
 <span class="n">sl_death</span> <span class="o">=</span> <span class="n">cleanAndReturn</span><span class="p">(</span><span class="n">sl</span><span class="p">,</span><span class="s1">&#39;variable&#39;</span><span class="p">,</span> <span class="s1">&#39;death_confirmed&#39;</span><span class="p">,</span> <span class="s1">&#39;sl&#39;</span><span class="p">);</span>
 
+
+<span class="sd">&quot;&quot;&quot; II/ merge and fill 0 for date that are not existing in all three countries&quot;&quot;&quot;</span>
+
 <span class="n">new_cases</span> <span class="o">=</span> <span class="n">guinea_new_case</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">liberia_new_case</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sl_new_case</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
 <span class="n">deaths</span> <span class="o">=</span> <span class="n">guinea_death</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">liberia_death</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sl_death</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
 
 
-<span class="sd">&quot;&quot;&quot; II/ get interesting values&quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot; NOT EXISTENT VALUES ARE CONSIDERED AS MISSING VALUES FOR DATE ADDED DURING THE JOIN &quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot;new_cases = new_cases.fillna(value=0)&quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot;deaths = deaths.fillna(value=0)&quot;&quot;&quot;</span>
 
-<span class="n">new_case_month_daily</span> <span class="o">=</span> <span class="n">new_cases</span><span class="o">.</span><span class="n">groupby</span><span class="p">([(</span><span class="n">new_cases</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span><span class="p">),(</span><span class="n">new_cases</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span><span class="p">)])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">countAndExtrapolate</span><span class="p">)</span>
-<span class="n">death_month_daily</span> <span class="o">=</span> <span class="n">deaths</span><span class="o">.</span><span class="n">groupby</span><span class="p">([(</span><span class="n">deaths</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span><span class="p">),(</span><span class="n">deaths</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span><span class="p">)])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">countAndExtrapolate</span><span class="p">)</span>
+
+<span class="sd">&quot;&quot;&quot; III/ merge axis 1 (by region) and sum &quot;&quot;&quot;</span>
+
+<span class="n">new_cases</span> <span class="o">=</span> <span class="n">new_cases</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">deaths</span> <span class="o">=</span> <span class="n">deaths</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="sd">&quot;&quot;&quot; IV/ merge axis 0 (by month) and take mean&quot;&quot;&quot;</span>
+
+<span class="n">new_case_month_daily</span> <span class="o">=</span> <span class="n">new_cases</span><span class="o">.</span><span class="n">groupby</span><span class="p">([(</span><span class="n">new_cases</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span><span class="p">),(</span><span class="n">new_cases</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span><span class="p">)])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">averageDailyPerMonth</span><span class="p">)</span>
+<span class="n">death_month_daily</span> <span class="o">=</span> <span class="n">deaths</span><span class="o">.</span><span class="n">groupby</span><span class="p">([(</span><span class="n">deaths</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span><span class="p">),(</span><span class="n">deaths</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span><span class="p">)])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">averageDailyPerMonth</span><span class="p">)</span>
 
 
+<span class="sd">&quot;&quot;&quot;V/ Print result&quot;&quot;&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;########################## NEW CASES ##########################&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">new_case_month_daily</span><span class="p">)</span>
 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;########################## DEATH ##########################&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">death_month_daily</span><span class="p">)</span>
 </pre></div>
 
@@ -11893,108 +11912,24 @@ Make sure you handle all the different expressions for <em>new cases</em> and <e
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>        guinea                                                   liberia  \
-         Beyla Boffa Kindia Kouroussa Lola Nzerekore Siguiri Bomi County   
-2014 6      NC    NC     NC        NC   NC        NC      NC    0.000000   
-     7      NC    NC     NC        NC   NC        NC      NC    0.545455   
-     8      NC     0     NC         0   NC         0       0    0.000000   
-     9      NC    NC      1        NC   NC        NC      NC    0.416667   
-     10     NC    NC     NC        NC   NC        NC      NC    0.166667   
-     11     NC    NC     NC        NC   NC        NC      NC    0.000000   
-     12     NC    NC     NC        NC   NC        NC      NC  101.500000   
-
-                                             ...           \
-        Bong County Gbarpolu County          ...            
-2014 6     0.000000              NC          ...            
-     7     0.000000               0          ...            
-     8     2.000000              NC          ...            
-     9     1.958333               0          ...            
-     10    0.722222        0.363636          ...            
-     11    0.000000               0          ...            
-     12  101.250000             7.5          ...            
-
-                          sl                                       \
-        34 Military Hospital Bo EMC Hastings-F/Town Kenema (IFRC)   
-2014 6                    NC     NC              NC            NC   
-     7                    NC     NC              NC            NC   
-     8                    NC     NC              NC            NC   
-     9                    NC     NC              NC            NC   
-     10                   NC     NC              NC            NC   
-     11                   NC     NC              NC            NC   
-     12                   NC     NC              NC            NC   
-
-                                                                               \
-        Kenema (KGH) Police training School Police traning School Unnamed: 18   
-2014 6            NC                     NC                    NC          NC   
-     7            NC                     NC                    NC          NC   
-     8            NC                     NC                    NC          NC   
-     9            NC                     NC                    NC          NC   
-     10           NC                     NC                    NC          NC   
-     11           NC                     NC                    NC          NC   
-     12           NC                     NC                    NC          NC   
-
-                                            
-        Western area Western area combined  
-2014 6            NC                    NC  
-     7            NC                    NC  
-     8            NC                    NC  
-     9            NC                    NC  
-     10      25.7273                    NC  
-     11           NC                    NC  
-     12           NC                    NC  
-
-[7 rows x 34 columns]
-            liberia                                                           \
-        Bomi County Bong County Gbarpolu County Grand Bassa Grand Cape Mount   
-2014 6            0           0              NC          NC               NC   
-     7     0.545455    0.727273               0           0                0   
-     8      9.88889     7.88889              NC         1.5          2.77778   
-     9      26.0435      12.087               0      13.913          5.30435   
-     10          30     15.4286        0.428571     21.1429                6   
-     11          NC          NC              NC          NC               NC   
-     12          NC          NC              NC          NC               NC   
-
-                                                                          \
-        Grand Gedeh Grand Kru Lofa County Margibi County Maryland County   
-2014 6           NC         0     8.85714        1.33333               0   
-     7            0         0     23.1818              2               0   
-     8            0        NC          90        11.5556              48   
-     9            0     4.125         170        33.5217          0.1875   
-     10           0         5     192.714        41.4286               0   
-     11          NC        NC          NC             NC              NC   
-     12          NC        NC          NC             NC              NC   
-
-                 ...                            sl                         \
-                 ...          34 Military Hospital Bo EMC Hastings-F/Town   
-2014 6           ...                            NC     NC              NC   
-     7           ...                            NC     NC              NC   
-     8           ...                            NC     NC              NC   
-     9           ...                            NC     NC              NC   
-     10          ...                            NC     NC              NC   
-     11          ...                            NC     NC              NC   
-     12          ...                            NC     NC              NC   
-
-                                                           \
-        Kenema (IFRC) Kenema (KGH) Police training School   
-2014 6             NC           NC                     NC   
-     7             NC           NC                     NC   
-     8             NC           NC                     NC   
-     9             NC           NC                     NC   
-     10            NC           NC                     NC   
-     11            NC           NC                     NC   
-     12            NC           NC                     NC   
-
-                                                                              
-        Police traning School Unnamed: 18 Western area Western area combined  
-2014 6                     NC          NC           NC                    NC  
-     7                     NC          NC           NC                    NC  
-     8                     NC          NC           NC                    NC  
-     9                     NC          NC           NC                    NC  
-     10                    NC          NC      128.909                    NC  
-     11                    NC          NC           NC                    NC  
-     12                    NC          NC           NC                    NC  
-
-[7 rows x 27 columns]
+<pre>########################## NEW CASES ##########################
+           guinea      liberia        sl
+2014 6   0.000000     4.285714  0.000000
+     7   0.000000     3.636364  0.000000
+     8   0.000000     4.454545  0.000000
+     9   0.033333     9.866667  0.000000
+     10  0.000000     2.166667  9.433333
+     11  0.000000     3.080000  0.000000
+     12  0.000000  3474.600000  0.000000
+########################## DEATH ##########################
+         guinea     liberia         sl
+2014 6      0.0   34.285714   0.000000
+     7      0.0   86.545455   0.000000
+     8      0.0  160.181818   0.000000
+     9      0.0  970.800000   0.000000
+     10     0.0  465.258065  45.741935
+     11     0.0    0.000000   0.000000
+     12     0.0    0.000000   0.000000
 </pre>
 </div>
 </div>
