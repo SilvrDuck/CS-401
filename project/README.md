@@ -15,7 +15,7 @@ indicators in the city.
 We decided to explore this by using data from AirBnB, from them we will be able
 to compare data between cities but also see the evolution through time.
 
-We will also restrict our research to two cities, XXXX and YYYY because there
+We will also restrict our research to two cities, Berlin and Amsterdam because there
 exists a lot of data about them and so that we can be more thorough in our
 analysis.
 
@@ -32,15 +32,16 @@ Each question will be answered for the two chosen cities, and compared:
 
  - http://insideairbnb.com/get-the-data.html contains dataset taken from AirBnb
      the past few years for some cities Wikipedia (find general informations about
-     cities: number of inhabitant, tourist per year)
- - http://tour-pedia.org/about/datasets.html
- - https://www.govdata.de/ (for cities in Belgium)
+     cities: number of inhabitant, tourist per year). The datasets regarding the cities of interest are quite big.
+ - http://tour-pedia.org/about/datasets.html data about points of interest and housing in different countries. Might be useful to look at how hotels compare to Airbnb.
+ - https://www.govdata.de/ More data about Germany. Some data in here might be useful to develop more about Berlin.
+ – https://data.overheid.nl/ More data about the Netherlands. We can use it to enrich data about Amsterdam.
 
 ## Internal milestones up until project milestone 2
 
  - Wisely select the cities we want to work on (probably Berlin as the first
      city, because of its size and the amount of data available, but we still
-     need to select the second one)
+     need to select the second one, currently we are thinking about Amsterdam since it’s a highly touristic place with different problematic with respect to Berlin)
 
  - Limit the scope of the project (there are A LOT of data we could link to
      tourism and AirBnB data, for instance, we could compare the occupancy and
