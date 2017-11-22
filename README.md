@@ -1,6 +1,12 @@
 # CS-401
 Applied Data Analysis
 
+## HW4 
+
+Review HW4 at https://silvrduck.github.io/CS-401/
+or directly at our jupyter notebook in the HW4 folder.
+
+
 ## Useful links
 
 https://github.com/epfl-ada/ADA2017-Homeworks
