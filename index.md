@@ -4,23 +4,17 @@ title:  "Consequences of AirBnB on cities"
 date:   2017-12-16 11:36:50 +0100
 ---
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+# Airbnb data analysis
+## Introduction
+Airbnb is without a doute a dominant housing platform in Europe. There is a lot of controversy about it. Some find that it opens the market in a good way, allowing cheap housing in apartments for everybody, while helping people paying for their rent. Some seem to consider it as the harbinger of doom of the hotel industry, while bringing up the price of housing for the local population. We do not want to take position in this debate, but rather to shed light on some facts about the service.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+There is a lot of variety on the usage of Airbnb across countries. To get some insight about the situation in Europe, we chose Amsterdam and Berlin. Two cities in the top 10 of the most visited cities in Europe by tourists, while being rather different, especially in size. They both acted to regulate Airbnb in 2016, in different ways. Berlin banned the service entirely, to decide later to allow it again under strict condition and restricted time for private people. Amsterdam on the other side made a deal directly with the company to limit the ability the rent an apartment to a limited number of days per year.
 
-Jekyll also offers powerful support for code snippets:
+We will first investigate on the small coastal city of Amsterdam, and then on the gigantic international city of Berlin. For those two we will look first at the usage of Airbnb and how it evolved over time. The data comes from [Inside Airbnb](http://insideairbnb.com), a project to help explore the website. After this, we will look at some data that we found about the cities themselves. Several open data website were used, most notably [Berlin Open Data](https://daten.berlin.de/) and [the Netherlands data portal](https://data.overheid.nl/). The goal is then to see if there are correlation between data we know about the cities and different parameters
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+After these explorations, we try to see if correlation
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
-
+## Amsterdam
+## Berlin
+## Possible links between Airbnb and the city ecosystem
+## Conclusion
