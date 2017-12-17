@@ -15,6 +15,12 @@ We will first investigate on the small coastal city of Amsterdam, and then on th
 After these explorations, we try to see if correlation
 
 ## Amsterdam
+
+{% include amsterdam_neighbourhoods_map.md %}
+
 ## Berlin
+
+{% include berlin_neighbourhoods_map.md %}
+
 ## Possible links between Airbnb and the city ecosystem
 ## Conclusion
