@@ -44,7 +44,7 @@ The law didn’t really impact creation of new Airbnb. We could even think that 
 
 -- *TODO graph* {% include am_top_neighbourhoods.md %}
 
--- *TODO* compare number of housing to number of Airbnb
+-- *TODO graph* compare number of housing to number of Airbnb
 
 -- *TODO* corelation airbnb and land stock price
 
