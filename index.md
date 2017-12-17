@@ -38,12 +38,11 @@ While comparing the data from 2015 and 2017, we also noticed that the average pr
 
 As mentioned before, Amsterdam took steps in 2017 to regulate the market. We can clearly see this in effect when ploting the amount of days available per apartment. There is a shift towards shorter availability periods below 60 days. We can still surprisingly see that a lot of appartment where available for more than 60 days. It is probably due to the fact that availability doesn’t mean that the apartment was actually rented.
 
-*TODO* {% include am_availability_days_histogram.md %}
+*TODO_graph* {% include am_availability_days_histogram.md %}
 
 The law didn’t really impact creation of new Airbnb. We could even think that it actually created a need for more apartment, since they can be rented less time. The neighborhoods with the higher increase in Airbnb amount are shown below. They are mainly concentrated around the center.
 
-
--- *TODO in percentage* {% include am_top_neighbourhoods.md %}
+-- *TODO graph* {% include am_top_neighbourhoods.md %}
 
 -- *TODO* compare number of housing to number of Airbnb
 
