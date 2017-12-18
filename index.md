@@ -28,6 +28,8 @@ As we can see on this map, there are much more AirBnb available in the neighbour
 
 A study was made by the city of Amsterdam regarding the satisfaction of its dwellers with respect to several criteria. The graph below show corellations in-between those, and also compared to the amount of Airbnb. We note that the first column, depending on the amount of Airbnb, is less corelated to the satisfaction values than themselves. This correlation can also be explained by proximity to city center.
 
+{% include am_satisfaction_corr.md %}
+
 -- *TODO_GRAPH* compare satisfaction with living env to airbnb
 
 ### Over the years
