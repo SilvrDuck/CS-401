@@ -48,6 +48,11 @@ The law didn’t really impact creation of new Airbnb. We could even think that 
 
 -- *TODO graph* compare number of housing to number of Airbnb
 
+The following two graphs show, before and after the regulation, the proportion of 
+
+{% include am_airbnb_rate_2015.md %}
+{% include am_airbnb_rate_2017.md %}
+
 -- *TODO* corelation airbnb and land stock price
 
 ## Berlin
