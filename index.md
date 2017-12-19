@@ -11,7 +11,7 @@ There is a lot of variety on the usage of Airbnb across countries. To get some i
 
 We will first investigate on the small coastal capital city of Amsterdam, and then on the gigantic international city of Berlin. For those two we will look first at the usage of Airbnb and how it evolved over time. The data comes from [Inside Airbnb](http://insideairbnb.com), a project to help explore the website. We will enrich this analysis using several datasets from open data website of the cities themselves. We used [Berlin Open Data](https://daten.berlin.de/) and [the Netherlands data portal](https://data.overheid.nl/). The goal is then to see if there are correlations between facts about the cities and what we see from Airbnb.
 
-After these explorations, we will try to understand better what might be general about the tourists behaviour when traveling. 
+We will conclude by taking a look at what seems to be recurrent in the data between the two cities.
 
 ## Amsterdam
 
@@ -36,17 +36,17 @@ The first number we want to highlight when talking about Airbnb in Amsterdam is 
 
 #### Price evolution
 
-While comparing the data from 2015 and 2017, we also noticed that the average price on Airbnb went up quite uniformly. Maybe this is due to the restricting agreement. Owners might need to pull up a higher price in order to make profit.
+While comparing the data from 2015 and 2017, we also noticed that the average price on Airbnb went up. The restricting agreement could have modified the available supply regarding to the relative demand.
 
 {% include am_price_years.md %}
 
 Looking at this graph, we see that there are spikes of price every weekend, and that the price during the summer vacation is way less predictable.
 
-We can put this realization in perspective with the plot price distribution in the city between 2015 and 2016.
+We can put this realisation in perspective with the plot price distribution in the city between 2015 and 2016.
 
 {% include am_price_boxplot.md %}
 
-From this graph, we clearly see that the housing price in Amsterdam raised a lot between 2015 et 2016. What is interesting though is that *Airbnb’s price went up by 118% on average, while plot price went up 130%*.
+From this graph, we clearly see that the housing price in Amsterdam raised a lot between 2015 et 2016. What is interesting though is that *Airbnb’s price went up by x1.18 on average, while plot price went up x1.30.
 
 #### Attempts at regulation
 
@@ -85,7 +85,7 @@ In 2016 there was, approximatly 15k unique Airbnb available. In 2017 this number
 
 #### Prices
 
-Contrary to Amsterdam, where the price of airbnb increased a lot, the price in Berlin actually decreased (not as much as the price increase in Amsterdam, but still enough to be visible on the following graph).
+Contrary to Amsterdam, where the price of airbnb increased a substantially, the price in Berlin slightly decreased.
 
 {% include be_price_years.md %}
 
@@ -112,10 +112,6 @@ In the following plot, we tried to see if the average square meter price to rent
 {% include be_square_meter_versus_price.md %}
 
 The outlier is due to a very expensive Airbnb in Haselhorst, where there is not much Airbnb.
-
-## Possible links between Airbnb and the city ecosystem
-
-
 
 ## Conclusion
 
