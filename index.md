@@ -115,4 +115,6 @@ The outlier is due to a very expensive Airbnb in Haselhorst, where there is not 
 
 ## Conclusion
 
+Airbnb is often perceived in a negative way by the neighbourhood in attractive city. This is because of the increase in demand, especially in the town centre, that some area see their price increasing drastically, making the neighbourhood less and less accessible for local residents and more and more fashioned for tourism. This Venicia effect has a name “gentrification” and can lead to a lack of understanding from the population that sometimes have to move house or to complain about the noisy nocturne behaviour of the visitors.
+
 To conclude, we have learn a little bit more about the distribution and evolution of Airbnb in those two cities. What we see is that political solutions to help local hospitality service rival against the American giant are hard to put into practice effectively. In both Berlin and Amsterdam, the before and after the law weren’t much different on a statistical level. Except that in Berlin, the market went down for a few month.
