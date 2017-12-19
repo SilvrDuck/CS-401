@@ -60,7 +60,7 @@ The law didn’t really impact creation of new Airbnb. We could even think that 
 
 The following graph show a normalized vision of this increase with repsect to the number of housing per neighbourhood.
 
-{% include am_increase_in_neighbourhoods.md }
+{% include am_increase_in_neighbourhoods.md %}
 
 The situation in 2017 is hence the following.
 
@@ -101,15 +101,15 @@ The following graph shows some interesting figures about the number of days avai
 
 We have seen that the density of Airbnb in the city center is higher. We were also interested to see where the increase of Airbnb is mainly located. To our suprise, it was in suburbian districts that the increase was the strongest, as this map tells. We show here the top 15 districts in term of increase.
 
-{% be_map_top_districts.md %}
+{% include be_map_top_districts.md %}
 
 We then looked at the other side of the coin and saw that some neighbourhoods had experienced a decrease in amount of Airbnb. All of them were as well located outside of the city and had lost a dozen of Airbnb. A notable exception is Marzahn-Süd which went from 257 Airbnbs in 2016 to only 13 in 2017.
 
-{% be_map_worst_districts.md %}
+{% include be_map_worst_districts.md %}
 
 In the following plot, we tried to see if the average square meter price to rent an appartment had any influence on the price the owner would rent its apartment. To our suprise, it didn’t. Each dot represents one district of Berlin.
 
-{% be_square_meter_versus_price.md %}
+{% include be_square_meter_versus_price.md %}
 
 The outlier is due to a very expensive Airbnb in Haselhorst, where there is not much Airbnb.
 
