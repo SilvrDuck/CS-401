@@ -48,5 +48,7 @@ Each question will be answered for the two chosen cities, and compared:
      the price to the weather, to major international event, ...) we need to
      define a limit to the scope of this project not to get lost.
 
-## Question for TA
+## Repartition of work
+
+The three members of the team worked together on the tasks and on the report.
 
